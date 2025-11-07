@@ -1,0 +1,21 @@
+{
+  "type": "Topology",
+  "objects": {
+    "india": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Polygon",
+          "properties": {
+            "dtname": "Thane",
+            "stname": "Maharashtra"
+          },
+          "arcs": [[0, 1, 2, 3]]
+        }
+      ]
+    }
+  },
+  "arcs": []
+}
+
+

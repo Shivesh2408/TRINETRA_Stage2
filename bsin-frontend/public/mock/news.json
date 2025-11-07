@@ -1,0 +1,24 @@
+[
+  {
+    "title": "AI-powered medal predictor re-trained with 2024 data",
+    "description": "BSIN refreshed the model with Tokyo+Paris combined datasets. Accuracy improved from 82% to 89%.",
+    "date": "28/10/2025"
+  },
+  {
+    "title": "District-level talent scouting now live in 50+ regions",
+    "description": "Initial release of AI Talent Finder launched for 14 states, revealing Punjab and Karnataka as top hubs.",
+    "date": "19/10/2025"
+  },
+  {
+    "title": "Multilingual dashboard with Bhashini integration launched",
+    "description": "BSIN now supports Hindi, Tamil, and Bengali dashboards to improve accessibility for state officials.",
+    "date": "11/10/2025"
+  },
+  {
+    "title": "Climate risk module added to BSIN policy engine",
+    "description": "Helps visualize heat-wave impact on athlete readiness across Indian states for outdoor sports.",
+    "date": "01/10/2025"
+  }
+]
+
+

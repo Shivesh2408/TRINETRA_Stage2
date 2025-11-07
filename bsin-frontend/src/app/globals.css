@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --brand: 14 165 233; /* sky-500 */
+  --bg-start: 255 255 255;   /* white */
+  --bg-end: 249 250 251;     /* gray-50 */
+  --text-primary: 17 24 39;   /* gray-900 */
+  --text-secondary: 75 85 99; /* gray-600 */
+}
+
+/* Global background enhancements */
+html, body {
+  background-color: rgb(var(--bg-start));
+  color: rgb(var(--text-primary));
+}
+
+/* Soft grid + subtle overlay for depth */
+.bg-grid {
+  position: relative;
+}
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px;
+  mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+  pointer-events: none;
+}
+.bg-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.02));
+  pointer-events: none;
+}
+
+/* Glass utility */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(90deg, rgb(var(--brand)) 0%, #3b82f6 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle shine hover */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+.shine::before {
+  content: "";
+  position: absolute;
+  inset: -150% -50% auto -50%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%);
+  transform: translateX(-100%) rotate(12deg);
+}
+.shine:hover::before {
+  transition: transform 700ms ease;
+  transform: translateX(200%) rotate(12deg);
+}
+
+/* Premium animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.slide-in-from-top-2 {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
